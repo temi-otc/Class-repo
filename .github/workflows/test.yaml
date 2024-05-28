@@ -9,11 +9,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-      env:
-        Cloud:Azure
-        Age:21
-        Sex:Boy
-        Music:reggae
+    env:
+      Cloud: "Azure"
+      Age: "21"
+      Sex: "Boy"
+      Music: "reggae"
 
     steps:
      - name: run an in-line script
