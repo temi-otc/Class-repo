@@ -25,7 +25,7 @@ jobs:
     #    uses: actions/checkout@v4
 
      - name: Open terraform folder
-       run: ls .\terraform
+       run: ls ./terraform
 
     #  - name: run an in-line script
     #    run: echo this is my story O
