@@ -1,0 +1,15 @@
+
+
+name: Dee
+on:
+  push:
+   branches:
+     - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+     - name: run an in-line script
+       run: echo this is my story
+       
