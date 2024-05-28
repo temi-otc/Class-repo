@@ -10,7 +10,7 @@ jobs:
   build:
     defaults:
       run:
-        working-directory: .\terraform
+        working-directory: ./terraform
 
     runs-on: ubuntu-latest
     env:
