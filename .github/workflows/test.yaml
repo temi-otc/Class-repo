@@ -13,6 +13,7 @@ jobs:
        Cloud:Azure
        Age:21
        Sex:Boy
+       Music:reggae
 
     steps:
      - name: run an in-line script
@@ -23,7 +24,7 @@ jobs:
 
      - name: using variables 2
        run: echo I want to go back to when I was "${{env.Age}}" years old
-       
+
      - name: using variables 3
        run: echo Tolu is a stubborn "${{env.Sex}}"
 
