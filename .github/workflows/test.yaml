@@ -21,7 +21,7 @@ jobs:
        uses: actions/checkout@v4
 
      - name: run an in-line script
-       run: echo this is my story
+       run: echo this is my story O
 
      - name: using variables
        run: echo the name of my cloud is "${{env.Cloud}}"
