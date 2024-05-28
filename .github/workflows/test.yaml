@@ -9,7 +9,21 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+      env
+       Cloud:Azure
+       Age:21
+       Sex:Boy
+
     steps:
      - name: run an in-line script
        run: echo this is my story
+
+     - name: using variables
+       run: echo the name of my cloud is "${{env.Cloud}}"
+
+     - name: using variables 2
+       run: echo I want to go back to when I was "${{env.Age}}" years old
        
+     - name: using variables 3
+       run: echo Tolu is a stubborn "${{env.Sex}}"
+
