@@ -8,6 +8,10 @@ on:
 
 jobs:
   build:
+    defaults:
+      run:
+        working-directory: .\terraform
+
     runs-on: ubuntu-latest
     env:
       Cloud: "Azure"
@@ -20,30 +24,33 @@ jobs:
      - name: Checkout Repository
        uses: actions/checkout@v4
 
-     - name: run an in-line script
-       run: echo this is my story O
+     - name: Open terraform folder
+       run: ls .\terraform
 
-     - name: using variables
-       run: echo the name of my cloud is "${{env.Cloud}}"
+    #  - name: run an in-line script
+    #    run: echo this is my story O
 
-     - name: using variables 2
-       run: echo I want to go back to when I was "${{env.Age}}" years old
+    #  - name: using variables
+    #    run: echo the name of my cloud is "${{env.Cloud}}"
 
-     - name: using variables 3
-       run: echo Tolu is a stubborn "${{env.Sex}}"
+    #  - name: using variables 2
+    #    run: echo I want to go back to when I was "${{env.Age}}" years old
 
-     - name: Login Azure
-       uses: azure/login@v2
-       with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-        enable-AzPSSession: true 
+    #  - name: using variables 3
+    #    run: echo Tolu is a stubborn "${{env.Sex}}"
 
-     - name: Run Azure PowerShell inline script
-       uses: azure/powershell@v2
-       with:
-        inlineScript: |
-          Get-AzResourceGroup
-        azPSVersion: "latest"
+    #  - name: Login Azure
+    #    uses: azure/login@v2
+    #    with:
+    #     creds: ${{ secrets.AZURE_CREDENTIALS }}
+    #     enable-AzPSSession: true 
+
+    #  - name: Run Azure PowerShell inline script
+    #    uses: azure/powershell@v2
+    #    with:
+    #     inlineScript: |
+    #       Get-AzResourceGroup
+    #     azPSVersion: "latest"
 
     
 
